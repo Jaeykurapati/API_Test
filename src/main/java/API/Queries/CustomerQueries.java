@@ -66,12 +66,12 @@ public class CustomerQueries {
     }
 
     private static void getEmployee(ResultSet rs, Customer customer) throws SQLException {
-        customer.setCustomerNumber(rs.getInt("customerNumber"));
-        customer.setCustomerName(rs.getString("customerName"));
+        customer.setCustomerNumber(rs.getInt("customer_number"));
+        customer.setCustomerName(rs.getString("customer_name"));
         customer.setCity(rs.getString("city"));
         customer.setState(rs.getString("state"));
         customer.setCountry(rs.getString("country"));
-        customer.setZipcode(rs.getString("postalCode"));
+        customer.setZipcode(rs.getString("postal_code"));
         customer.setPhoneNumber(rs.getString("phone"));
     }
 }

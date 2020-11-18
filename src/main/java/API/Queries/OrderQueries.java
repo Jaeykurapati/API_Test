@@ -81,12 +81,12 @@ public class OrderQueries {
             Customer customer = new Customer();
 
             while (rs.next()) {
-                customer.setCustomerName(rs.getString("customerName"));
-                customer.setCustomerNumber(rs.getInt("customerNumber"));
+                customer.setCustomerName(rs.getString("customer_name"));
+                customer.setCustomerNumber(rs.getInt("customer_number"));
                 customer.setCity(rs.getString("city"));
                 customer.setState(rs.getString("state"));
                 customer.setCountry(rs.getString("country"));
-                customer.setZipcode(rs.getString("postalCode"));
+                customer.setZipcode(rs.getString("postal_code"));
                 customer.setPhoneNumber(rs.getString("phone"));
             }
 
@@ -107,11 +107,11 @@ public class OrderQueries {
     }
 
     private static void getOrder(ResultSet rs, Order order) throws SQLException {
-        order.setOrderNumber(rs.getInt("orderNumber"));
-        order.setCustomerNumber(rs.getInt("customerNumber"));
-        order.setOrderDate(rs.getDate("orderDate"));
-        order.setRequiredDate(rs.getDate("requiredDate"));
-        order.setShippedDate(rs.getDate("shippedDate"));
+        order.setOrderNumber(rs.getInt("order_number"));
+        order.setCustomerNumber(rs.getInt("customer_number"));
+        order.setOrderDate(rs.getDate("order_date"));
+        order.setRequiredDate(rs.getDate("required_date"));
+        order.setShippedDate(rs.getDate("shipped_date"));
         order.setStatus(rs.getString("status"));
     }
 }

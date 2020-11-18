@@ -25,10 +25,10 @@ public class ProductQueries {
 
             while (rs.next()) {
                 Product product = new Product();
-                product.setProductName(rs.getString("productName"));
-                product.setProductCode(rs.getString("productCode"));
-                product.setProductDescription(rs.getString("productDescription"));
-                product.setProductVendor(rs.getString("productVendor"));
+                product.setProductName(rs.getString("product_name"));
+                product.setProductCode(rs.getString("product_code"));
+                product.setProductDescription(rs.getString("product_description"));
+                product.setProductVendor(rs.getString("product_vendor"));
                 System.out.println(product.getProductName());
                 productList.add(product);
             }
